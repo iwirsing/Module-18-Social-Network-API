@@ -11,6 +11,8 @@ module.exports = {
     getSingleUser(req,res) {
         User.findOne({_id: req.params.userId})
         .select('-__v') //remove the version key from the results
+        .populate('thoughts')
+        .populate('friends')
         .then((user)=>
             //ternary that checks if user exists or not
             !user? res.status(404).json({ message: 'No user with that ID' }): res.json(user)
