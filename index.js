@@ -6,6 +6,9 @@ const routes = require('./routes');
 const currentDirectory = process.cwd();
 //check what this returns
 console.log('current working directory: ',currentDirectory);
+const activity = currentDirectory.includes('02-Challenge')
+? currentDirectory.split('/02-Challenge/')[1]
+: currentDirectory;
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -18,7 +21,7 @@ app.use(routes);
 //listen
 db.once('open', ()=>{
     app.listen(PORT, () => {
-        console.log(`API server for ${currentDirectory} running on PORT ${PORT}`);
+        console.log(`API server for ${activity} running on PORT ${PORT}`);
     })
 });
 
