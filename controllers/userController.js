@@ -30,7 +30,7 @@ module.exports = {
         console.log('Updating User with:');
         console.log(req.body);
         User.findOneAndUpdate(
-            {_id: req.params.studentId}, //filter for finding
+            {_id: req.params.userId}, //filter for finding
             {username: req.body.username,
             email: req.body.email}, //the items to update
             {new: true,             //options:returns modified user

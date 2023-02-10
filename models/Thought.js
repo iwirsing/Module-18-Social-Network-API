@@ -33,7 +33,7 @@ const thoughtSchema = new Schema(
     {
         thoughtText: {
             type: String,
-            required: [true,"Please share your thought."]
+            required: [true,"Please share your thought."],
             minLength: 1,
             maxLength: 280,
         },
