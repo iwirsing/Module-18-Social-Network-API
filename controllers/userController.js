@@ -18,7 +18,7 @@ module.exports = {
             //ternary that checks if user exists or not
             !user? res.status(404).json({ message: 'No user with that ID' }): res.json(user)
         )
-        // .catch((err)=>res.status(500).json(err));
+        .catch((err)=>res.status(500).json(err));
     },
     //create or post a new User
     postNewUser(req,res){
