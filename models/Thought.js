@@ -1,6 +1,6 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
 //import time format function at utils helper
-const format_date=require("../utils/helpers");
+const formatDate=require("../utils/helpers");
 
 
 //create reaction Schema
@@ -8,7 +8,7 @@ const reactionSchema = new Schema(
     {
         reactionId: {
             type: Schema.Types.ObjectId,
-            default: function () { return new ObjectId()},
+            default: function () { return Types.ObjectId()},
         },
         reactionBody: {
             type: String,
@@ -22,7 +22,7 @@ const reactionSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            get: (createdAtVal)=>format_date(createdAtVal),
+            get: (createdAtVal)=>formatDate(createdAtVal),
         },
     }
 );
@@ -40,7 +40,7 @@ const thoughtSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            get: (createdAtVal)=>format_date(createdAtVal),
+            get: (createdAtVal)=>formatDate(createdAtVal),
         },
         username: {
             type: String,
@@ -63,7 +63,7 @@ thoughtSchema.virtual('reactionCount').get(function () {
 });
 
 //initialize thought model
-const Thought = model('thought', thoughtSchema);
+const Thought = model('Thought', thoughtSchema);
 
 
 module.exports = Thought;
