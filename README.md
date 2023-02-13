@@ -33,6 +33,9 @@ User's friends list and reactions to thoughts can be created and deleted. Also, 
 
 ## Walkthrough Video and Screenshot
 
+Click the image below to view the video walkthrough of this app.
+[![SocialNetworkAPI](./utils/img/social-network-api.png)](https://vimeo.com/798539878/5a34f5496a)
+
 ## Contributing 
 
 Ask the author and use according to the MIT license.
