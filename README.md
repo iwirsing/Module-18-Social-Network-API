@@ -42,7 +42,7 @@ Ask the author and use according to the MIT license.
 
 ## Test 
 
-Test the routes by performing HTTP endpoint testing using Postman.
+Test the routes by performing HTTP endpoint testing using Postman or Insomnia or any other similar application.
 
 ## Questions? 
 
