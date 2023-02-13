@@ -7,7 +7,7 @@ This is an API for a social network web application where users can  add  or rem
 
 ##  Table of Contents 
 1. [Installation](#installation)
-2. [Usage](#usage)  
+2. [Usage and Features](#usage-and-features)  
 3. [Walkthrough Video and Screenshot](#walkthrough-video-and-screenshot)
 4. [Contributing](#contributing) 
 5. [Test](#test) 
@@ -16,11 +16,20 @@ This is an API for a social network web application where users can  add  or rem
 
 ## Installation 
 
-Use `npm install` to install the modules needed for the project.
+1. Download files in local folder and unzip.
+2. Open folder in terminal.
+3. Use `npm install` to install the modules needed for the project.
 
-## Usage 
+## Usage and Features
 
-This is run using `npm run start` and the routing performed through Postman.
+1. This app is run in the terminal using `npm run start` 
+2. Perform routing test Postman or Insomnia or some other similar software.
+
+This app uses MondoDB through Mongoose models and commands. Querying this DB displays results in formatted JSON.
+
+On top of GET, POST, PUT and DELETE can be performed on Users and Thoughts in this social network API.
+
+User's friends list and reactions to thoughts can be created and deleted. Also, when the User is deleted all the associated thoughts will be deleted as well through deleteMany.
 
 ## Walkthrough Video and Screenshot
 
