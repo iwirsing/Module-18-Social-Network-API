@@ -44,6 +44,30 @@ Ask the author and use according to the MIT license.
 
 Test the routes by performing HTTP endpoint testing using Postman or Insomnia or any other similar application.
 
+Here are the routes for testing:
+
+USERS
+1. Creating users: POST http://localhost:3001/api/users
+2. Find all users: GET http://localhost:3001/api/users
+3. Find user by ID: GET http://localhost:3001/api/users/:userID where :userID is replaced by actual ID of user.
+4. Update user by ID: PUT http://localhost:3001/api/users/:userID where :userID is replaced by actual ID of user.
+5. Delete user (and associated thoughts) by ID: DELETE http://localhost:3001/api/users/:userID where :userID replaced by actual ID of user.
+
+THOUGHTS
+1. Creating thought: POST http://localhost:3001/api/thoughts/:userID where :userID is replaced by actual ID of user.
+2. Find all thoughts: GET http://localhost:3001/api/thoughts
+3. Find thought by ID: GET http://localhost:3001/api/thoughts/:thoughtID where :thoughtID is replaced by actual ID of thought.
+4. Update thought by ID: PUT http://localhost:3001/api/thoughts/:thoughtID where :thoughtID is replaced by actual ID of thought.
+5. Delete thought by ID: DELETE http://localhost:3001/api/thoughts/:thoughtID where :thoughtID is replaced by actual ID of thought.
+
+REACTIONS
+1. Creating reaction: POST http://localhost:3001/api/thoughts/:thoughtID/react where :thoughtID is replaced by actual ID of thought.
+2. Deleting reaction: DELETE http://localhost:3001/api/thoughts/:thoughtID/:reactID where :thoughtID is replaced by actual ID of thought and :reactID is replaced by reactionId of reaction.
+
+FRIENDS
+1. Add friends: POST http://localhost:3001/api/users/:userID/:friendID where :userID is replaced by actual ID of current user and :friendID is actual ID of another user that the current user wants to add as friend.
+2. Delete friends: POST http://localhost:3001/api/users/:userID/:friendID where :userID is replaced by actual ID of current user and :friendID is actual ID of another user that the current user wants to remove as friend.
+ 
 ## Questions? 
 
 Please contact me through any of the following:
