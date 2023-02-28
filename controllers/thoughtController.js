@@ -55,7 +55,15 @@ module.exports = {
         Thought.findOneAndDelete({_id:params.thoughtId})
             .then((thought)=>{
                 if(!thought) return res.status(404).json({message: "No thought found with this ID"});
-                res.json(thought);
+                // res.json(thought);
+                return User.findOneAndUpdate(
+                    {thoughts: params.thoughtId},
+                    {$pull: {thoughts: params.thoughtId}},
+                    {new:true}
+                );
+            }).then(user=>{
+                if(!user) return res.status(404).json({message:"No user with this thought"});
+                res.json(user);
             })
             .catch((err)=>res.status(500).json(err));
 
